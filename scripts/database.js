@@ -91,3 +91,19 @@ const database = {
         {id: 10, name: "Pine Bluffs Trails", parkAreasId: 6},
     ]
 }
+
+export const getGuests = () => {
+    return database.guests.map(guests => ({...guests}))
+}
+
+export const getParkAreas = () => {
+    return database.parkAreas.map(parkAreas => ({...parkAreas}))
+}
+
+export const getAttractions= () => {
+    return database.attractions.map(attractions => ({...attractions}))
+}
+
+export const getServices = () => {
+    return database.services.map(services => ({...services}))
+}
