@@ -17,7 +17,7 @@ const database = {
         {id: 7, firstName: "Caleb", lastName: "DiGinero", currentGuest: true , parkAreasId: 6},
         {id: 8, firstName: "Justin", lastName: "German", currentGuest: true , parkAreasId: 2},
         {id: 9, firstName: "Levi", lastName: "Grupa", currentGuest: true , parkAreasId: 3},
-        {id: 1, firstName: "Zoe", lastName: "Tweedall", currentGuest: true , parkAreasId: 5},
+        {id: 10, firstName: "Zoe", lastName: "Tweedall", currentGuest: true , parkAreasId: 5},
         {id: 11, firstName: "Jason", lastName: "Call", currentGuest: false , parkAreasId: 1},
         {id: 12, firstName: "Linda", lastName: "Shelton", currentGuest: true , parkAreasId: 2},
         {id: 13, firstName: "Jonathan", lastName: "Vanderslice", currentGuest: true , parkAreasId:3},
