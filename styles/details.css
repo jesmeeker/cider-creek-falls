@@ -1,3 +1,10 @@
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+	align-content: baseline;
+}
+
 .details {
     display: flex;
     justify-content: space-evenly;

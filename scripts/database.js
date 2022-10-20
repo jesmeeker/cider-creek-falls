@@ -1,157 +1,93 @@
-/*
-
-    This module contains all of the data, or state, for the
-    application. It exports two functions that allow other
-    modules to get copies of the state.
-
-*/
 const database = {
-    walkers: [{
-        id: 1,
-        name: "Alphonse Meron",
-        email: "ameron0@mashable.com",
-        // city: "Chicago"
-    }, {
-        id: 2,
-        name: "Damara Pentecust",
-        email: "dpentecust1@apache.org",
-        // city: "White Plains"
-    }, {
-        id: 3,
-        name: "Anna Bowton",
-        email: "abowton2@wisc.edu",
-        // city: "Sarasota"
-    }, {
-        id: 4,
-        name: "Hunfredo Drynan",
-        email: "hdrynan3@bizjournals.com",
-        // city: "San Diego"
-    }, {
-        id: 5,
-        name: "Elmira Bick",
-        email: "ebick4@biblegateway.com",
-        // city: "Boise"
-    }, {
-        id: 6,
-        name: "Bernie Dreger",
-        email: "bdreger5@zimbio.com",
-        // city: "Denver"
-    }, {
-        id: 7,
-        name: "Rolando Gault",
-        email: "rgault6@google.com",
-        // city: "Tucson"
-    }, {
-        id: 8,
-        name: "Tiffanie Tubby",
-        email: "ttubby7@intel.com",
-        // city: "Phoenix"
-    }, {
-        id: 9,
-        name: "Tomlin Cutill",
-        email: "tcutill8@marketwatch.com",
-        // city: "Minneapolis"
-    }, {
-        id: 10,
-        name: "Arv Biddle",
-        email: "abiddle9@cafepress.com",
-        // city: "Pittsburgh"
-    }],
-    pets: [{
-        id: 1,
-        name: "Dianemarie Hartness",
-        walkerId: 3, 
-        cityId: 8
-    }, {
-        id: 2,
-        name: "Christoph Fosdyke",
-        walkerId: 10,
-        cityId: 2
-    }, {
-        id: 3,
-        name: "Rocket",
-        walkerId: 7,
-        cityId: 9
-    }, {
-        id: 4,
-        name: "Ebony",
-        walkerId: 3,
-        cityId: 2
-    }, {
-        id: 5,
-        name: "Scotty",
-        walkerId: 8,
-        cityId: 6
-    }, {
-        id: 6,
-        name: "Mac",
-        walkerId: 2,
-        cityId: 3
-    }, {
-        id: 7,
-        name: "Oreo",
-        walkerId: 5,
-        cityId: 4
-    }, {
-        id: 8,
-        name: "Sassy",
-        walkerId: 1,
-        cityId: 5
-    }, {
-        id: 9,
-        name: "Salem",
-        walkerId: 9,
-        cityId: 10
-    }, {
-        id: 10,
-        name: "Panda",
-        walkerId: 7,
-        cityId: 9
-    }],
-    walkerCities: [
-        { id: 1, walkerId: 10, cityId: 1 },
-        { id: 2, walkerId: 8, cityId: 6 },
-        { id: 3, walkerId: 5, cityId: 4 },
-        { id: 4, walkerId: 9, cityId: 10 },
-        { id: 5, walkerId: 2, cityId: 3 },
-        { id: 6, walkerId: 4, cityId: 7 },
-        { id: 7, walkerId: 1, cityId: 5 },
-        { id: 8, walkerId: 7, cityId: 9 },
-        { id: 9, walkerId: 3, cityId: 2 },
-        { id: 10, walkerId: 6, cityId: 8 },
-        { id: 11, walkerId: 6, cityId: 9 },
-        { id: 12, walkerId: 9, cityId: 7 },
-        { id: 13, walkerId: 5, cityId: 7 },
-        { id: 14, walkerId: 10, cityId: 2 },
-    ],
-    cities: [
-        { id: 1, name: "Pittsburgh"},
-        { id: 2, name: "Minneapolis"},
-        { id: 3, name: "Phoenix"},
-        { id: 4, name: "Tucson"},
-        { id: 5, name: "Denver"},
-        { id: 6, name: "Boise"},
-        { id: 7, name: "San Diego"},
-        { id: 8, name: "Sarasota"},
-        { id: 9, name: "White Plains"},
-        { id: 10, name: "Chicago"}
-    ],
+    parkAreas: [
+        {id: 1, name: "Northeast"},
+        {id: 2, name: "Northern"},
+        {id: 3, name: "Northwest"},
+        {id: 4, name: "Southwest"},
+        {id: 5, name: "Southern"},
+        {id: 6, name: "Southeast"},
+    ], 
+    guests: [
+        {id: 1, firstName: "Jane", lastName: "Smith", currentGuest: true, parkAreasId: 1},
+        {id: 2, firstName: "Janet", lastName: "Doe", currentGuest: true, parkAreasId: 2},
+        {id: 3, firstName: "John", lastName: "Meeker", currentGuest: true, parkAreasId: 3},
+        {id: 4, firstName: "Jon", lastName: "McKelvey", currentGuest: true , parkAreasId: 4},
+        {id: 5, firstName: "Jonathan", lastName: "Stewart", currentGuest: false , parkAreasId:5 },
+        {id: 6, firstName: "Jessica", lastName: "Philips", currentGuest: true , parkAreasId: 5},
+        {id: 7, firstName: "Caleb", lastName: "DiGinero", currentGuest: true , parkAreasId: 6},
+        {id: 8, firstName: "Justin", lastName: "German", currentGuest: true , parkAreasId: 2},
+        {id: 9, firstName: "Levi", lastName: "Grupa", currentGuest: true , parkAreasId: 3},
+        {id: 1, firstName: "Zoe", lastName: "Tweedall", currentGuest: true , parkAreasId: 5},
+        {id: 11, firstName: "Jason", lastName: "Call", currentGuest: false , parkAreasId: 1},
+        {id: 12, firstName: "Linda", lastName: "Shelton", currentGuest: true , parkAreasId: 2},
+        {id: 13, firstName: "Jonathan", lastName: "Vanderslice", currentGuest: true , parkAreasId:3},
+        {id: 14, firstName: "Roxann", lastName: "Laub", currentGuest: true , parkAreasId: 4},
+        {id: 15, firstName: "Breanna", lastName: "Giles", currentGuest: true , parkAreasId: 2},
+        {id: 16, firstName: "Maddie", lastName: "Curry", currentGuest: false , parkAreasId: 2},
+        {id: 17, firstName: "Olivia", lastName: "Stephenson", currentGuest: false , parkAreasId: 1},
+        {id: 18, firstName: "Lisa", lastName: "Hayner", currentGuest: true , parkAreasId: 4},
+        {id: 19, firstName: "Zach", lastName: "Goins", currentGuest: true , parkAreasId: 5},
+        {id: 20, firstName: "Paul", lastName: "Clements", currentGuest: true , parkAreasId: 6},
+        {id: 21, firstName: "Caitlin", lastName: "Tate", currentGuest: true , parkAreasId: 2},
+        {id: 22, firstName: "Julia", lastName: "Frodigh", currentGuest: false , parkAreasId: 3},
+        {id: 23, firstName: "Ellie", lastName: "Mugford", curretGuest: false , parkAreasId: 1},
+        {id: 24, firstName: "Sara", lastName: "Rishel", currentGuest: true , parkAreasId: 2},
+        {id: 25, firstName: "Kelly", lastName: "Price", currentGuest: true , parkAreasId: 5},
+        {id: 26, firstName: "Karen", lastName: "Spindler", currentGuest: true , parkAreasId: 6},
+        {id: 27, firstName: "Kathleen", lastName: "Primeaux", currentGuest: true , parkAreasId: 2},
+        {id: 28, firstName: "Jenny", lastName: "Santrock", currentGuest: false , parkAreasId: 1},
+        {id: 29, firstName: "Mitchel", lastName: "Cooney", currentGuest: true , parkAreasId: 5},
+        {id: 30, firstName: "Thomas", lastName: "Kline", currentGuest: true , parkAreasId: 6},
+        {id: 31, firstName: "Joe", lastName: "Winegar", currentGuest: true , parkAreasId: 4},
+        {id: 32, firstName: "Hadleigh", lastName: "Martino", currentGuest: true , parkAreasId: 2},
+        {id: 33, firstName: "James", lastName: "Riddle", currentGuest: false , parkAreasId: 2},
+        {id: 34, firstName: "Faye", lastName: "Edwards", currentGuest: false , parkAreasId: 1},
+        {id: 35, firstName: "Louis", lastName: "Miller", currentGuest: true , parkAreasId: 1},
+        {id: 36, firstName: "Chip", lastName: "Brown", currentGuest: true , parkAreasId: 1},
+        {id: 37, firstName: "Kristen", lastName: "Johnson", currentGuest: true , parkAreasId: 2},
+        {id: 38, firstName: "Lainey", lastName: "Watts", currentGuest: true , parkAreasId: 1},
+        {id: 39, firstName: "Jack", lastName: "Zubarev", currentGuest: false , parkAreasId: 1},
+        {id: 40, firstName: "Rob", lastName: "Connolly", currentGuest: true , parkAreasId: 6}
+    ], 
+    services: [
+        {id: 1, name: "Rafting", parkAreasId: 1, attractionsId: 1},       
+        {id: 2, name: "Canoeing", parkAreasId: 1, attractionsId: 1},
+        {id: 3, name: "Fishing", parkAreasId: 1, attractionsId: 1},
+        {id: 4, name: "Hiking", parkAreasId: 2, attractionsId: 2},
+        {id: 5, name: "Picnicking", parkAreasId: 2, attractionsId: 2},
+        {id: 6, name: "Rock Climbing", parkAreasId: 2, attractionsId: 2},
+        {id: 7, name: "Lodging", parkAreasId: 3, attractionsId: 3},
+        {id: 8, name: "Lodging", parkAreasId: 3, attractionsId: 4},
+        {id: 9, name: "Parking", parkAreasId: 3, attractionsId: 3},
+        {id: 10, name: "Parking", parkAreasId: 3, attractionsId: 4},
+        {id: 11, name: "Parking", parkAreasId: 3, attractionsId: 5},
+        {id: 12, name: "Information", parkAreasId: 3, attractionsId: 3},
+        {id: 13, name: "Information", parkAreasId: 3, attractionsId: 4},
+        {id: 14, name: "Information", parkAreasId: 3, attractionsId: 5},
+        {id: 15, name: "Picknicking", parkAreasId: 3, attractionsId: 3},
+        {id: 16, name: "Picknicking", parkAreasId: 3, attractionsId: 4},
+        {id: 17, name: "Fishing", parkAreasId: 4, attractionsId: 6},
+        {id: 18, name: "Hiking", parkAreasId: 4, attractionsId: 6},
+        {id: 19, name: "Information", parkAreasId: 5, attractionsId: 8},
+        {id: 20, name: "Lodging", parkAreasId: 5, attractionsId: 7},
+        {id: 21, name: "Parking", parkAreasId: 5, attractionsId: 7},
+        {id: 22, name: "Parking", parkAreasId: 5, attractionsId: 8},
+        {id: 23, name: "Parking", parkAreasId: 5, attractionsId: 9},
+        {id: 24, name: "Food Vendors", parkAreasId: 6, attractionsId: 10},
+        {id: 25, name: "Hiking", parkAreasId: 6, attractionsId: 10},
+        {id: 26, name: "Picknicking", parkAreasId: 6, attractionsId: 10},
+        {id: 27, name: "Zip Lines", parkAreasId: 6, attractionsId: 10}
+    ], 
+    attractions: [
+        {id: 1, name: "Chamfort River", parkAreasId: 1},
+        {id: 2, name: "Lost Wolf Hiking Trail", parkAreasId: 2},
+        {id: 3, name: "Lodge", parkAreasId: 3},
+        {id: 4, name: "Hotel", parkAreasId: 3},
+        {id: 5, name: "Restaurant", parkAreasId: 3},
+        {id: 6, name: "Gander River", parkAreasId: 4},
+        {id: 7, name: "Campgrounds", parkAreasId: 5},
+        {id: 8, name: "Office Park", parkAreasId: 5},
+        {id: 9, name: "Playground", parkAreasId: 5},
+        {id: 10, name: "Pine Bluffs Trails", parkAreasId: 6},
+    ]
 }
-
-export const getWalkers = () => {
-    return database.walkers.map(walkers => ({...walkers}))
-}
-
-export const getPets = () => {
-    return database.pets.map(pets => ({...pets}))
-}
-
-export const getCities= () => {
-    return database.cities.map(cities => ({...cities}))
-}
-
-export const getWalkerCities = () => {
-    return database.walkerCities.map(walkerCities => ({...walkerCities}))
-}
-
-
