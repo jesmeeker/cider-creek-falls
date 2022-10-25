@@ -49,35 +49,48 @@ const database = {
         {id: 39, firstName: "Jack", lastName: "Zubarev", currentGuest: false , parkAreasId: 1},
         {id: 40, firstName: "Rob", lastName: "Connolly", currentGuest: true , parkAreasId: 6}
     ], 
-    services: [
-        {id: 1, name: "Rafting", parkAreasId: 1, attractionsId: 1},       
-        {id: 2, name: "Canoeing", parkAreasId: 1, attractionsId: 1},
-        {id: 3, name: "Fishing", parkAreasId: 1, attractionsId: 1},
-        {id: 4, name: "Hiking", parkAreasId: 2, attractionsId: 2},
-        {id: 5, name: "Picnicking", parkAreasId: 2, attractionsId: 2},
-        {id: 6, name: "Rock Climbing", parkAreasId: 2, attractionsId: 2},
-        {id: 7, name: "Lodging", parkAreasId: 3, attractionsId: 3},
-        {id: 8, name: "Lodging", parkAreasId: 3, attractionsId: 4},
-        {id: 9, name: "Parking", parkAreasId: 3, attractionsId: 3},
-        {id: 10, name: "Parking", parkAreasId: 3, attractionsId: 4},
-        {id: 11, name: "Parking", parkAreasId: 3, attractionsId: 5},
-        {id: 12, name: "Information", parkAreasId: 3, attractionsId: 3},
-        {id: 13, name: "Information", parkAreasId: 3, attractionsId: 4},
-        {id: 14, name: "Information", parkAreasId: 3, attractionsId: 5},
-        {id: 15, name: "Picknicking", parkAreasId: 3, attractionsId: 3},
-        {id: 16, name: "Picknicking", parkAreasId: 3, attractionsId: 4},
-        {id: 17, name: "Fishing", parkAreasId: 4, attractionsId: 6},
-        {id: 18, name: "Hiking", parkAreasId: 4, attractionsId: 6},
-        {id: 19, name: "Information", parkAreasId: 5, attractionsId: 8},
-        {id: 20, name: "Lodging", parkAreasId: 5, attractionsId: 7},
-        {id: 21, name: "Parking", parkAreasId: 5, attractionsId: 7},
-        {id: 22, name: "Parking", parkAreasId: 5, attractionsId: 8},
-        {id: 23, name: "Parking", parkAreasId: 5, attractionsId: 9},
-        {id: 24, name: "Food Vendors", parkAreasId: 6, attractionsId: 10},
-        {id: 25, name: "Hiking", parkAreasId: 6, attractionsId: 10},
-        {id: 26, name: "Picknicking", parkAreasId: 6, attractionsId: 10},
-        {id: 27, name: "Zip Lines", parkAreasId: 6, attractionsId: 10}
+    serviceAreas: [
+        {id: 1, name: "Rafting", servicesId: 1, parkAreasId: 1, attractionsId: 1},       
+        {id: 2, name: "Canoeing", servicesId: 2, parkAreasId: 1, attractionsId: 1},
+        {id: 3, name: "Fishing", servicesId: 3, parkAreasId: 1, attractionsId: 1},
+        {id: 4, name: "Hiking", servicesId: 4, parkAreasId: 2, attractionsId: 2},
+        {id: 5, name: "Picnicking", servicesId: 5, parkAreasId: 2, attractionsId: 2},
+        {id: 6, name: "Rock Climbing", servicesId: 6, parkAreasId: 2, attractionsId: 2},
+        {id: 7, name: "Lodging", servicesId: 7, parkAreasId: 3, attractionsId: 3},
+        {id: 8, name: "Lodging", servicesId: 7, parkAreasId: 3, attractionsId: 4},
+        {id: 9, name: "Parking", servicesId: 8, parkAreasId: 3, attractionsId: 3},
+        {id: 10, name: "Parking", servicesId: 8, parkAreasId: 3, attractionsId: 4},
+        {id: 11, name: "Parking", servicesId: 8, parkAreasId: 3, attractionsId: 5},
+        {id: 12, name: "Information", servicesId: 9, parkAreasId: 3, attractionsId: 3},
+        {id: 13, name: "Information", servicesId: 9, parkAreasId: 3, attractionsId: 4},
+        {id: 14, name: "Information", servicesId: 9, parkAreasId: 3, attractionsId: 5},
+        {id: 15, name: "Picknicking", servicesId: 5, parkAreasId: 3, attractionsId: 3},
+        {id: 16, name: "Picknicking", servicesId: 5, parkAreasId: 3, attractionsId: 4},
+        {id: 17, name: "Fishing", servicesId: 3, parkAreasId: 4, attractionsId: 6},
+        {id: 18, name: "Hiking", servicesId: 4, parkAreasId: 4, attractionsId: 6},
+        {id: 19, name: "Information", servicesId: 9, parkAreasId: 5, attractionsId: 8},
+        {id: 20, name: "Lodging", servicesId: 7, parkAreasId: 5, attractionsId: 7},
+        {id: 21, name: "Parking", servicesId: 8, parkAreasId: 5, attractionsId: 7},
+        {id: 22, name: "Parking", servicesId: 8, parkAreasId: 5, attractionsId: 8},
+        {id: 23, name: "Parking", servicesId: 8, parkAreasId: 5, attractionsId: 9},
+        {id: 24, name: "Food Vendors", servicesId: 10, parkAreasId: 6, attractionsId: 10},
+        {id: 25, name: "Hiking", servicesId: 4, parkAreasId: 6, attractionsId: 10},
+        {id: 26, name: "Picknicking", servicesId: 5, parkAreasId: 6, attractionsId: 10},
+        {id: 27, name: "Zip Lines", servicesId: 11, parkAreasId: 6, attractionsId: 10}
     ], 
+    services: [
+        {id: 1, name: "Rafting"},
+        {id: 2, name: "Canoeing"},
+        {id: 3, name: "Fishing"},
+        {id: 4, name: "Hiking"},
+        {id: 5, name: "Picnicking"},
+        {id: 6, name: "Rock Climbing"},
+        {id: 7, name: "Lodging"},
+        {id: 8, name: "Parking"},
+        {id: 9, name: "Information"},
+        {id: 10, name: "Food Vendors"},
+        {id: 11, name: "Zip Lines"}
+    ],
     attractions: [
         {id: 1, name: "Chamfort River", parkAreasId: 1},
         {id: 2, name: "Lost Wolf Hiking Trail", parkAreasId: 2},
@@ -102,6 +115,10 @@ export const getParkAreas = () => {
 
 export const getAttractions= () => {
     return database.attractions.map(attractions => ({...attractions}))
+}
+
+export const getServiceAreas = () => {
+    return database.serviceAreas.map(serviceAreas => ({...serviceAreas}))
 }
 
 export const getServices = () => {

@@ -6,7 +6,7 @@ let areas = getParkAreas();
 
 
 export const currentGuestsList = () => {
-    let currentGuestsHTML = "<ul>"
+    let currentGuestsHTML = `<ul class="guest-list">`
 
     for (const guest of guests) {
         if (guest.currentGuest === true) {
