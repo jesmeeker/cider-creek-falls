@@ -76,7 +76,7 @@ document.addEventListener(
                     const areasString = createAreaString(serviceAreas)
                     
 
-                    window.alert(`${service.name} is available in ${areasString}`)
+                    window.alert(`${service.name} is available in ${areasString} section.`)
                 }
             }
         }

@@ -30,9 +30,9 @@ const guestHTML =
 const servicesContainer = document.querySelector("#services")
 
 const servicesHTML = 
-`<div class="services"> Park Services:<ul class="comma-list">${serviceString()}
+`<ul class="comma-list"><div class="services"> Park Services: </div>${serviceString()}
 </ul>
-</div>
+
 `
 
 

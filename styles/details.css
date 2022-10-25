@@ -40,8 +40,8 @@
 }
 
 .guest-list {
-    font-family: "Raleway", Arial, sans-serif;
-    font-size: 16px;
+    padding-right: 15px;
+    padding-bottom: 20px;
     color: rgb(42, 117, 92);
 }
 
